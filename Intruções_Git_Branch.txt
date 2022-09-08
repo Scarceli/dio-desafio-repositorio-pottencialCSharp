@@ -1,0 +1,78 @@
+*BRANCH*
+Movimentar entre as Branch:
+	git checkout "branch desejada"
+
+Comando para Criar uma Branch:
+	checkout -b "nova Branch" //=>(-b = criacando a branch nova e indo para ela)	
+
+Quando for fazer um push(mandar para o repositório) deve indicar o branch
+	git push origin "branch que deseja"
+
+comando para junção do conteudo, tem que estar na branch que recebera a atualizada
+	git merge "branch desejada"
+
+comando para mostrar as branch criadas
+	git branch
+
+comando para renomear branch atual
+	git branch -m
+comando para renomear branch qualquer
+	git branch -m "branch desejada" "novo nome branch desejada"
+
+comando para deletar branch 
+	git branch -d "branch desejada"
+
+*STASH*
+comando para deixar os arquivo e alterações somente para branch atual (os arquivos ja devem estar add)
+	git add *
+	git stash save "mensagem desejada"
+
+comando para listar stash(caixa"array" dos arquivos guardados)
+	git stash list
+
+retornar o arquivo da stash
+	git stash pop "index"
+
+limpar o stash
+	git stash clear
+
+*LOG*
+comando para ver o historico
+	git log
+
+comando para ver o historico de pastas ou arquivo especifica
+	git log "nome do diretorio ou arquivo"
+
+comando para ver o historico resumido em uma linha
+	git log --oneline
+
+*RESET*
+pode ser usado com HASH ou HEAD~ (igual o RESET) 
+
+comando para Reseta um commit por hash(chave)
+	git reset "hash"	
+
+comando para resetar um commit referente ao head(posicionamento)
+	git reset head~1  // ou seja 1 anterior do head
+	git reset head~2  // ou seja 2 anterior do head ...
+
+comando para resetar um commit utilizando --soft com head(na qual posicao deseja head~1... head~2...) volta no modo que estava os arquivos
+	git reset --soft head~1 // ou seja 1 anterior do head
+	git reset --soft head~2 // ou seja 2 anterior do head ...
+
+
+comando para resetar um commit utilizando --mixed retorna os arquivos para antes de add(standing)
+	git reset --mixed
+	git reset --mixed head~2 // ou seja 2 anterior do head ...
+
+comando para resetar um commit utilizando --hard excluir os arquivos
+	git reset --hard
+	git reset --hard head~2 // ou seja 2 anterior do head ...
+
+*REVERT* 
+pode ser usado com HASH ou HEAD~ (igual o RESET)
+
+comando para reverter o arquivo ou o que foi modificado no arquivo
+
+
+

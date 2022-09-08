@@ -1,0 +1,29 @@
+Anotações de Orientação a Objeto
+
+4 Pilares da Orientação a Objeto: Abstração, Encapsulamento, Herança e Polimorfismo.
+
+-ABSTRAÇÃO: abstrair um objeto do mundo real para um contexto específico.(considerar apenas atributo necessários)
+
+-ENCAPSULAMENTO: serve para proteger uma classe e definir limites para alteração de suas propriedades. (oculta seu comportamento e expoe somente o necessário)
+
+-HERANÇA: permite reutilizar atributos, métodos e comportamentos de uma classe em outras classes. (agrupar objetos que são do mesmo tipo com características diferentes)
+obs: no C# só uma classe só herda uma por vez.
+
+-POLIFORMISMO: possibilidade das classes filhas sobrescrever métodos da classe pai para que se comportem de maneira diferente e ter sua própria implementação. ("muitas formas") 
+obs: para sobrescrever um método utiliza-se a palavra OVERRIDE.
+ex: public override void Apresentar(){}
+
+Há dois tipos de polimorfismo:
+	- Polimorfismo em Tempo de compilação(Overload/Early Binding) = Métodos com mesmo nome na mesma classe (não necessita de herança)
+  	ex: public void Apresentar(){}
+            public void Apresentar(string nome){}
+	
+	- Polimorfismo em tempo de execução (Override/Late Binding) = Métodos da classe pai que será reescrita (necessita de herença)
+	ex: 
+	    Class Pai{
+		public void Apresentar(){}
+		}	
+            Class Filha : Pai{  //Herdando de Pai
+		public override void Apresentar(){}
+		}
+
